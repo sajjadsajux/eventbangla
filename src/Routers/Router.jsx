@@ -3,6 +3,7 @@ import MainLayout from "../Layouts/MainLayout";
 import ErrorPages from "../Pages/ErrorPages/ErrorPages";
 import Home from "../Components/Home/Home";
 import About from "../Pages/About/About";
+import EventDetails from "../Components/EventDetails/EventDetails";
 
 const router = createBrowserRouter([
   {
@@ -25,6 +26,11 @@ const router = createBrowserRouter([
       {
         path: "/register",
         element: <h2>Register</h2>,
+      },
+      {
+        path: "/event/:id",
+        element: <EventDetails></EventDetails>,
+        loader: () => fetch("/eventbangla.json"),
       },
     ],
   },

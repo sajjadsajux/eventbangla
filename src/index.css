@@ -8,3 +8,7 @@
   --color-primary: #6601ff;
   --color-secondary: teal;
 }
+
+a.active {
+  @apply text-blue-600;
+}
