@@ -2,12 +2,12 @@
   {
     "id": 1,
     "thumbnail": "https://i.ibb.co.com/fVgbVvT4/slider4.jpg",
-    "name": "Dhaka Tech Innovators Summit 2025",
-    "category": "Tech",
+    "name": "Bangladesh Investment Summit 2025",
+    "category": "Startup",
     "date": "2025-06-15",
-    "location": "Dhaka Innovation Center",
-    "entryFee": "500 BDT",
-    "organizer": "TechBangla",
+    "location": "Hotel InterContinental Dhaka",
+    "entryFee": "200 BDT",
+    "organizer": "BIDA",
     "shortDescription": "A national conference showcasing Bangladesh's latest in AI, software, and IoT.",
     "seatsAvailable": 120
   },
