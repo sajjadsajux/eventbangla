@@ -1,13 +1,15 @@
 import React, { use, useState } from "react";
 import { BsEye, BsEyeSlash, BsGoogle } from "react-icons/bs";
-import { Link } from "react-router";
+import { Link, useNavigate } from "react-router";
 import { AuthContext } from "../../Provider/AuthProvider";
 import PasswordErrorToast from "../../Utils/PasswordErrorToast";
+import { showCustomSuccessToast } from "../../Utils/SuccessToast";
 
 const Register = () => {
   const [showPassword, setShowPassword] = useState(false);
 
-  const { RegisterUser, setUser } = use(AuthContext);
+  const { RegisterUser, setUser, UpdateUser } = use(AuthContext);
+  const navigate = useNavigate();
   const handleRegister = (e) => {
     e.preventDefault();
     console.log(e.target);
@@ -41,7 +43,16 @@ const Register = () => {
       .then((result) => {
         const user = result.user;
         console.log(user);
-        setUser(user);
+        UpdateUser({ displayName: name, photoURL: photo })
+          .then(() => {
+            setUser({ ...user, displayName: name, photoURL: photo });
+            navigate("/");
+          })
+          .catch((error) => {
+            alert(error.message);
+            setUser(user);
+          });
+        showCustomSuccessToast(` Your account has been created successfully`);
       })
       .catch((error) => {
         alert(error.message);

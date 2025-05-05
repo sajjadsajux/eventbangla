@@ -1,9 +1,13 @@
 import React, { use } from "react";
-import { Link } from "react-router";
+import { Link, useLocation, useNavigate } from "react-router";
 import { AuthContext } from "../../Provider/AuthProvider";
+import { showCustomSuccessToast } from "../../Utils/SuccessToast";
 
 const Login = () => {
   const { LoginUser, setUser } = use(AuthContext);
+  const location = useLocation();
+  const navigate = useNavigate();
+  console.log(location);
   const handleLogin = (e) => {
     e.preventDefault();
     console.log(e.target);
@@ -16,6 +20,8 @@ const Login = () => {
         const user = result.user;
         console.log(user);
         setUser(user);
+        showCustomSuccessToast(`You have successfully logged in.`);
+        navigate(`${location.state ? location.state : "/"}`);
       })
       .catch((error) => {
         alert(error.message);

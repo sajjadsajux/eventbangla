@@ -50,7 +50,7 @@ const Navbar = () => {
           <ul className="menu menu-horizontal px-1 font-semibold md:text-xl">{linksAll}</ul>
         </div>
         <div className="navbar-end flex gap-5">
-          <div>{user ? ` ${user.image}` : <FaUserEdit size={35} />}</div>
+          <div> {user?.photoURL ? <img src={user.photoURL} alt="User" className="w-10 h-10 rounded-full" /> : <FaUserEdit size={35} />}</div>
           {user ? (
             <button onClick={handleLogOut} className="btn btn-primary text-white text-sm btn-xs md:btn-md md:px-5">
               Log Out
