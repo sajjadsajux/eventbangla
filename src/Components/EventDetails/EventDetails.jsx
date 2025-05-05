@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { Link, useLoaderData, useParams } from "react-router";
+import { Bounce, toast, ToastContainer } from "react-toastify";
 
 const EventDetails = () => {
   const { id } = useParams();
@@ -13,13 +14,30 @@ const EventDetails = () => {
   }, [data, id]);
   const { thumbnail, name, category, date, time, location, entryFee, shortDescription, seatsAvailable, organizer, registrationDeadline } = uEvent;
 
+  const handleReserve = (e) => {
+    e.preventDefault();
+    e.target.reset();
+
+    toast.success("Thank you! Your reservation is confirmed.", {
+      position: "top-right",
+      autoClose: 5000,
+      hideProgressBar: false,
+      closeOnClick: false,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined,
+      theme: "light",
+      transition: Bounce,
+    });
+  };
+
   return (
     <>
       <section>
-        <div className="bg-[#f8f7fc] py-10 px-4">
-          <div className="container mx-auto grid grid-cols-1 lg:grid-cols-4 gap-8">
+        <div className="bg-[#f8f7fc] py-10 px-4 ">
+          <div className="container mx-auto grid grid-cols-1 lg:grid-cols-4 gap-8 ">
             {/* Left Side: Event Content */}
-            <div className="lg:col-span-3 bg-white p-6 rounded-2xl shadow-md">
+            <div className="lg:col-span-3 bg-white p-6 rounded-2xl shadow-md ">
               <img src={thumbnail} alt="Event Banner" className="w-full md:h-[60vh] rounded-xl mb-6" />
               <div className="flex justify-between items-center">
                 <h2 className="text-2xl font-bold mb-4">{name}</h2>
@@ -68,12 +86,13 @@ const EventDetails = () => {
               {/* Reservation Form */}
               <div className="bg-white p-6 rounded-2xl shadow-md space-y-3">
                 <h3 className="text-lg font-bold">Reserve Your Seat</h3>
-                <form className="space-y-4">
-                  <input type="text" placeholder="Your Name" className="w-full px-4 py-2 border rounded" />
-                  <input type="email" placeholder="Your Email" className="w-full px-4 py-2 border rounded" />
+                <form className="space-y-4 " onSubmit={handleReserve}>
+                  <input name="email" type="text" placeholder="Your Name" className="w-full px-4 py-2 border rounded" required />
+                  <input name="email" type="email" placeholder="Your Email" className="w-full px-4 py-2 border rounded" required />
                   <button type="submit" className="w-full bg-primary text-white py-2 rounded hover:bg-purple-700 transition">
                     Reserve Seat
                   </button>
+                  <ToastContainer></ToastContainer>
                 </form>
               </div>
             </div>

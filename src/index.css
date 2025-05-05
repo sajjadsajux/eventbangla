@@ -10,5 +10,5 @@
 }
 
 a.active {
-  @apply text-blue-600;
+  @apply text-primary;
 }
