@@ -6,6 +6,7 @@ import About from "../Pages/About/About";
 import EventDetails from "../Components/EventDetails/EventDetails";
 import Login from "../Pages/Login/Login";
 import Register from "../Pages/Register/Register";
+import ForgetPassword from "../Pages/ForgetPass/ForgetPassword";
 
 const router = createBrowserRouter([
   {
@@ -28,6 +29,10 @@ const router = createBrowserRouter([
       {
         path: "/register",
         element: <Register></Register>,
+      },
+      {
+        path: "/forgetpassword",
+        element: <ForgetPassword></ForgetPassword>,
       },
       {
         path: "/event/:id",
