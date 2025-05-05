@@ -5,11 +5,14 @@
     "name": "Bangladesh Investment Summit 2025",
     "category": "Startup",
     "date": "2025-06-15",
+    "time": "10:00 AM - 4:00 PM",
+    "duration": "6 hours",
     "location": "Hotel InterContinental Dhaka",
     "entryFee": "200 BDT",
     "organizer": "BIDA",
-    "shortDescription": "A national conference showcasing Bangladesh's latest in AI, software, and IoT.",
-    "seatsAvailable": 120
+    "shortDescription": "Bangladesh Investment Summit 2025 brings together entrepreneurs, venture capitalists, and policymakers to explore the nation's growing potential in sectors like AI, fintech, and clean energy. With panel discussions, startup showcases, and investor networking sessions, the summit acts as a launchpad for innovation and economic collaboration in Bangladesh.",
+    "seatsAvailable": 120,
+    "registrationDeadline": "2025-06-12"
   },
   {
     "id": 2,
@@ -17,11 +20,14 @@
     "name": "Chittagong Street Art Festival",
     "category": "Art",
     "date": "2025-07-02",
+    "time": "3:00 PM - 9:00 PM",
+    "duration": "6 hours",
     "location": "Chittagong City Gallery",
     "entryFee": "800 BDT",
     "organizer": "Artistic Roots BD",
-    "shortDescription": "A vibrant display of graffiti, street murals, and live painting by young artists.",
-    "seatsAvailable": 10
+    "shortDescription": "The Chittagong Street Art Festival is a bold celebration of urban creativity. Witness the city come alive with vibrant murals, live graffiti sessions, and immersive installations. Artists will transform public walls into powerful stories, giving voice to culture, identity, and activism through brush strokes and spray cans.",
+    "seatsAvailable": 10,
+    "registrationDeadline": "2025-06-28"
   },
   {
     "id": 3,
@@ -29,11 +35,14 @@
     "name": "Sylhet Folk & Baul Night",
     "category": "Music",
     "date": "2025-06-28",
+    "time": "6:30 PM - 10:30 PM",
+    "duration": "4 hours",
     "location": "Sylhet Stadium",
     "entryFee": "Free For All",
     "organizer": "BanglaTunes",
-    "shortDescription": "An enchanting night of folk songs, Baul melodies, and local instruments.",
-    "seatsAvailable": 50
+    "shortDescription": "Sylhet Folk & Baul Night is a spiritual musical gathering celebrating the mystic poetry and rhythms of rural Bengal. Enjoy soulful performances from renowned Baul singers and folk bands in a magical atmosphere under the stars. The event will also feature local food stalls and handmade crafts, offering a true taste of Sylheti culture.",
+    "seatsAvailable": 50,
+    "registrationDeadline": "2025-06-25"
   },
   {
     "id": 4,
@@ -41,11 +50,14 @@
     "name": "Startup Pitch Battle 2025",
     "category": "Entrepreneurship",
     "date": "2025-07-12",
+    "time": "11:00 AM - 5:00 PM",
+    "duration": "6 hours",
     "location": "ICT Tower, Dhaka",
     "entryFee": "1000 BDT",
     "organizer": "Startup Bangladesh",
-    "shortDescription": "Top 10 startups pitch live for funding, mentorship, and prizes.",
-    "seatsAvailable": 80
+    "shortDescription": "Startup Pitch Battle 2025 is Bangladesh’s premier startup competition where ten emerging businesses present their ideas to a panel of investors, mentors, and experts. With live pitching rounds, audience voting, and real-time feedback, the event offers startups a chance to secure funding and go from vision to reality.",
+    "seatsAvailable": 80,
+    "registrationDeadline": "2025-07-08"
   },
   {
     "id": 5,
@@ -53,11 +65,14 @@
     "name": "Rajshahi Food & Flavor Festival",
     "category": "Food",
     "date": "2025-06-22",
+    "time": "12:00 PM - 8:00 PM",
+    "duration": "8 hours",
     "location": "Padma Garden, Rajshahi",
     "entryFee": "200 BDT",
     "organizer": "TasteBangla",
-    "shortDescription": "Try authentic Bangladeshi street food, desserts, and drinks all in one place Try authentic Bangladeshi street food, desserts,Try authentic Bangladeshi street food, desserts, and drinks all in one place Try authentic Bangladeshi street food, dessertsTry authentic Bangladeshi street food, desserts, and drinks all in one place Try authentic Bangladeshi street food, desserts text-ellipsistext-ellipsistext-ellipsisdesserts text-ellipsistext-ellipsistext-ellipsisdesserts text-ellipsistext-ellipsist",
-    "seatsAvailable": 150
+    "shortDescription": "The Rajshahi Food & Flavor Festival is a mouthwatering journey through the flavors of Bangladesh. Explore 50+ stalls offering everything from traditional sweets and biryani to regional fusion dishes. The riverside ambiance, food challenges, and live cooking demos make this a can’t-miss event for every food lover.",
+    "seatsAvailable": 150,
+    "registrationDeadline": "2025-06-19"
   },
   {
     "id": 6,
@@ -65,10 +80,13 @@
     "name": "Photography Masterclass with GMB Akash",
     "category": "Workshop",
     "date": "2025-07-05",
+    "time": "9:00 AM - 1:00 PM",
+    "duration": "4 hours",
     "location": "Alliance Française de Dhaka",
     "entryFee": "750 BDT",
     "organizer": "Shutter Society",
-    "shortDescription": "Learn street photography techniques from one of Bangladesh’s best-known photojournalists.",
-    "seatsAvailable": 30
+    "shortDescription": "This exclusive masterclass with world-renowned photographer GMB Akash will take you deep into the art of visual storytelling. Learn how to capture emotion, culture, and contrast through your lens. With practical field tips, portfolio reviews, and real-time critiques, this workshop is ideal for aspiring and intermediate photographers.",
+    "seatsAvailable": 30,
+    "registrationDeadline": "2025-07-02"
   }
 ]
