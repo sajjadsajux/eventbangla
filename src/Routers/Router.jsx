@@ -7,6 +7,7 @@ import EventDetails from "../Components/EventDetails/EventDetails";
 import Login from "../Pages/Login/Login";
 import Register from "../Pages/Register/Register";
 import ForgetPassword from "../Pages/ForgetPass/ForgetPassword";
+import PrivateRoute from "../Provider/PrivateRoute";
 
 const router = createBrowserRouter([
   {
@@ -36,7 +37,11 @@ const router = createBrowserRouter([
       },
       {
         path: "/event/:id",
-        element: <EventDetails></EventDetails>,
+        element: (
+          <PrivateRoute>
+            <EventDetails></EventDetails>
+          </PrivateRoute>
+        ),
         loader: () => fetch("/eventbangla.json"),
       },
     ],

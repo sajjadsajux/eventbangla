@@ -10,5 +10,5 @@
 }
 
 a.active {
-  @apply text-primary;
+  @apply underline;
 }
