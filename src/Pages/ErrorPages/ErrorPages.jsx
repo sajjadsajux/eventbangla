@@ -1,7 +1,10 @@
 import React from "react";
 import { Link } from "react-router";
+import DynamicTittle from "../../Utils/DynamicTittle";
 
 const ErrorPages = () => {
+  DynamicTittle("404 Page");
+
   return (
     <section className="flex items-center h-screen p-16 bg-gray-900 text-gray-100">
       <div className="container flex flex-col items-center justify-center px-5 mx-auto my-8">

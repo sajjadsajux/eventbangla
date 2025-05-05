@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { useLoaderData, useParams } from "react-router";
 import { ToastContainer } from "react-toastify";
 import { showCustomSuccessToast } from "../../Utils/SuccessToast";
+import DynamicTittle from "../../Utils/DynamicTittle";
 
 const EventDetails = () => {
   const { id } = useParams();
@@ -21,6 +22,7 @@ const EventDetails = () => {
 
     showCustomSuccessToast(` Thank you, your seat is reserved!`);
   };
+  DynamicTittle(`${name}`);
 
   return (
     <>

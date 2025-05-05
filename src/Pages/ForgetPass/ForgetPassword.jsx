@@ -1,8 +1,11 @@
 import React, { use, useEffect, useState } from "react";
 import { AuthContext } from "../../Provider/AuthProvider";
 import { useLocation } from "react-router";
+import DynamicTittle from "../../Utils/DynamicTittle";
 
 const ForgetPassword = () => {
+  DynamicTittle("Forget Password");
+
   const { ResetPassword } = use(AuthContext);
   const location = useLocation();
   const [email, setEmail] = useState("");

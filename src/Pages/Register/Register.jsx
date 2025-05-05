@@ -4,8 +4,11 @@ import { Link, useNavigate } from "react-router";
 import { AuthContext } from "../../Provider/AuthProvider";
 import PasswordErrorToast from "../../Utils/PasswordErrorToast";
 import { showCustomSuccessToast } from "../../Utils/SuccessToast";
+import DynamicTittle from "../../Utils/DynamicTittle";
 
 const Register = () => {
+  DynamicTittle("Register");
+
   const [showPassword, setShowPassword] = useState(false);
 
   const { RegisterUser, setUser, UpdateUser, LoginGoogle } = use(AuthContext);

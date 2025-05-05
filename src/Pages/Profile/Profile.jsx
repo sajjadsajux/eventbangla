@@ -3,9 +3,12 @@ import { showCustomSuccessToast } from "../../Utils/SuccessToast";
 import PasswordErrorToast from "../../Utils/PasswordErrorToast";
 import { getAuth, updateProfile } from "firebase/auth";
 import app from "../../Firebase/firebase.config";
+import DynamicTittle from "../../Utils/DynamicTittle";
 const auth = getAuth(app);
 
 const Profile = () => {
+  DynamicTittle("Profile");
+
   const [userInfo, setUserInfo] = useState({
     name: auth.currentUser?.displayName,
     email: auth.currentUser?.email,

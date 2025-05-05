@@ -4,8 +4,11 @@ import { AuthContext } from "../../Provider/AuthProvider";
 import { showCustomSuccessToast } from "../../Utils/SuccessToast";
 import PasswordErrorToast from "../../Utils/PasswordErrorToast";
 import { BsGoogle } from "react-icons/bs";
+import DynamicTittle from "../../Utils/DynamicTittle";
 
 const Login = () => {
+  DynamicTittle("Login");
+
   const { LoginUser, setUser, UpdateUser, LoginGoogle } = use(AuthContext);
   const location = useLocation();
   const navigate = useNavigate();
