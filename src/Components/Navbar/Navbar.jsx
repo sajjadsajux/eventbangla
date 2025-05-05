@@ -55,7 +55,7 @@ const Navbar = () => {
               {linksAll}
             </ul>
           </div>
-          <a className=" text-sm md:text-2xl lg:text-3xl font-bold">EventBangla</a>
+          <a className=" text-xl md:text-2xl lg:text-3xl font-bold">EventBangla</a>
         </div>
         <div className="navbar-center hidden lg:flex">
           <ul className="menu menu-horizontal px-1 font-semibold md:text-xl">{linksAll}</ul>

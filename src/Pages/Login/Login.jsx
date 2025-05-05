@@ -1,4 +1,4 @@
-import React, { use } from "react";
+import React, { use, useRef, useState } from "react";
 import { Link, useLocation, useNavigate } from "react-router";
 import { AuthContext } from "../../Provider/AuthProvider";
 import { showCustomSuccessToast } from "../../Utils/SuccessToast";
@@ -9,6 +9,8 @@ const Login = () => {
   const { LoginUser, setUser, UpdateUser, LoginGoogle } = use(AuthContext);
   const location = useLocation();
   const navigate = useNavigate();
+  const [email, setEmail] = useState("");
+
   console.log(location);
   const handleLogin = (e) => {
     e.preventDefault();
@@ -51,28 +53,30 @@ const Login = () => {
         alert(error.message);
       });
   };
+  const handleForgetPass = () => {
+    navigate("/forget-password", { state: { email } });
+  };
+
   return (
     <>
       <div className="container mx-auto h-screen flex justify-center items-center px-2 md:px-0">
         <div className="w-full max-w-md mx-auto p-8  space-y-3 rounded-xl bg-gray-900 text-gray-100">
           <h1 className="text-2xl font-bold text-center">Login Page</h1>
           <form onSubmit={handleLogin} className="space-y-6">
-            <div className="space-y-1 text-sm lg:text-xl">
+            <div className="space-y-1 text-sm lg:text-base">
               <label className="block ">Email</label>
-              <input type="text" name="email" placeholder="Type Your Email" className="w-full px-4 py-3 rounded-md border-gray-700 bg-gray-900  focus:border-violet-400  " required />
+              <input type="text" name="email" placeholder="Type Your Email" className="w-full px-4 py-3 rounded-md border-gray-700 bg-white text-black  focus:border-violet-400  " required onChange={(e) => setEmail(e.target.value)} />
             </div>
-            <div className="space-y-1 text-sm lg:text-xl">
+            <div className="space-y-1 text-sm lg:text-base">
               <label htmlFor="password" className="block ">
                 Password
               </label>
-              <input type="password" name="password" placeholder="Type Your Password" className="w-full px-4 py-3 rounded-md border-gray-700 bg-gray-900  focus:border-violet-400" required />
-              <div className="flex justify-end text-xs text-gray-400">
-                <a rel="noopener noreferrer" href="#">
-                  Forgot Password?
-                </a>
+              <input type="password" name="password" placeholder="Type Your Password" className="w-full px-4 py-3 rounded-md border-gray-700 bg-white text-black  focus:border-violet-400" required />
+              <div className="flex justify-end text-xs lg:text-base text-gray-400 mt-2">
+                <button onClick={handleForgetPass}>Forgot Password?</button>
               </div>
             </div>
-            <button type="submit" className="block w-full p-3 text-center rounded-sm  bg-primary">
+            <button type="submit" className="block w-full p-3 text-center rounded-sm  bg-primary font-bold">
               Log In
             </button>
           </form>

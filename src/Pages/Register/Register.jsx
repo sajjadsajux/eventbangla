@@ -90,22 +90,22 @@ const Register = () => {
             {/* Name */}
             <div className="space-y-1 text-sm ">
               <label className="block font-bold lg:text-xl">Name</label>
-              <input type="text" name="name" placeholder="Type Your Name" className="w-full px-4 py-3 rounded-md border-gray-700 bg-gray-900  focus:border-violet-400  " required />
+              <input type="text" name="name" placeholder="Type Your Name" className="w-full px-4 py-3 rounded-md border-gray-700 bg-white text-black  focus:border-violet-400  " required />
             </div>
             {/* email */}
             <div className="space-y-1 text-sm ">
               <label className="block font-bold lg:text-xl">Email</label>
-              <input type="text" name="email" placeholder="Type Your Email" className="w-full px-4 py-3 rounded-md border-gray-700 bg-gray-900  focus:border-violet-400  " required />
+              <input type="text" name="email" placeholder="Type Your Email" className="w-full px-4 py-3 rounded-md border-gray-700 bg-white text-black focus:border-violet-400  " required />
             </div>
             {/* photourl */}
             <div className="space-y-1 text-sm ">
               <label className="block font-bold lg:text-xl">PhotoURL</label>
-              <input type="url" name="photo" placeholder="Paste Your Image URL" className="w-full px-4 py-3 rounded-md border-gray-700 bg-gray-900  focus:border-violet-400  " required />
+              <input type="url" name="photo" placeholder="Paste Your Image URL" className="w-full px-4 py-3 rounded-md border-gray-700 bg-white text-black  focus:border-violet-400  " required />
             </div>
             {/* password */}
             <div className="space-y-1 text-sm relative">
               <label className="block font-bold lg:text-xl">Password</label>
-              <input type={showPassword ? "text" : "password"} name="password" id="password" placeholder="Type Your Password" className="w-full px-4 py-3 rounded-md border-gray-700 bg-gray-900 focus:border-violet-400 pr-12" required />
+              <input type={showPassword ? "text" : "password"} name="password" id="password" placeholder="Type Your Password" className="w-full px-4 py-3 rounded-md border-gray-700 bg-white text-black focus:border-violet-400 pr-12" required />
               <span onClick={() => setShowPassword(!showPassword)} className="absolute right-4 top-11 text-xl text-gray-400 cursor-pointer ">
                 {showPassword ? <BsEyeSlash /> : <BsEye />}
               </span>

@@ -33,7 +33,7 @@ const router = createBrowserRouter([
         element: <Register></Register>,
       },
       {
-        path: "/forgetpassword",
+        path: "/forget-password",
         element: <ForgetPassword></ForgetPassword>,
       },
       {
