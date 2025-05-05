@@ -1,8 +1,10 @@
-import React from "react";
+import React, { use } from "react";
 import { FaUserEdit } from "react-icons/fa";
 import { NavLink } from "react-router";
+import { AuthContext } from "../../Provider/AuthProvider";
 
 const Navbar = () => {
+  const { user, LogOutUser } = use(AuthContext);
   const linksAll = (
     <>
       <li>
@@ -16,6 +18,17 @@ const Navbar = () => {
       </li>
     </>
   );
+
+  const handleLogOut = () => {
+    LogOutUser()
+      .then(() => {
+        alert("logged out");
+      })
+      .cath((error) => {
+        alert(error.message);
+      });
+  };
+
   return (
     <>
       <div className="navbar px-0  container mx-auto ">
@@ -40,9 +53,15 @@ const Navbar = () => {
           <div>
             <FaUserEdit size={35} />
           </div>
-          <NavLink to="/login" className="btn btn-primary text-white text-sm btn-xs md:btn-md md:px-5">
-            Login
-          </NavLink>
+          {user ? (
+            <button onClick={handleLogOut} className="btn btn-primary text-white text-sm btn-xs md:btn-md md:px-5">
+              Log Out
+            </button>
+          ) : (
+            <NavLink to="/login" className="btn btn-primary text-white text-sm btn-xs md:btn-md md:px-5">
+              Login
+            </NavLink>
+          )}
         </div>
       </div>
     </>
