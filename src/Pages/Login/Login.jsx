@@ -2,6 +2,7 @@ import React, { use } from "react";
 import { Link, useLocation, useNavigate } from "react-router";
 import { AuthContext } from "../../Provider/AuthProvider";
 import { showCustomSuccessToast } from "../../Utils/SuccessToast";
+import PasswordErrorToast from "../../Utils/PasswordErrorToast";
 
 const Login = () => {
   const { LoginUser, setUser } = use(AuthContext);
@@ -24,7 +25,7 @@ const Login = () => {
         navigate(`${location.state ? location.state : "/"}`);
       })
       .catch((error) => {
-        alert(error.message);
+        PasswordErrorToast(`Incorrect email or password. Please try again.`);
       });
   };
   return (

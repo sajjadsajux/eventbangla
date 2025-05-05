@@ -2,6 +2,7 @@ import React, { use } from "react";
 import { FaUserEdit } from "react-icons/fa";
 import { NavLink } from "react-router";
 import { AuthContext } from "../../Provider/AuthProvider";
+import { showCustomSuccessToast } from "../../Utils/SuccessToast";
 
 const Navbar = () => {
   const { user, LogOutUser } = use(AuthContext);
@@ -16,6 +17,13 @@ const Navbar = () => {
       <li>
         <NavLink to="/register">Register</NavLink>
       </li>
+      <>
+        {user && (
+          <li>
+            <NavLink to="/profile">My Profile</NavLink>
+          </li>
+        )}
+      </>
     </>
   );
 
@@ -23,6 +31,7 @@ const Navbar = () => {
     LogOutUser()
       .then(() => {
         alert("logged out");
+        showCustomSuccessToast(`You have been logged out. See you again!`);
       })
       .cath((error) => {
         alert(error.message);
@@ -50,7 +59,7 @@ const Navbar = () => {
           <ul className="menu menu-horizontal px-1 font-semibold md:text-xl">{linksAll}</ul>
         </div>
         <div className="navbar-end flex gap-5">
-          <div> {user?.photoURL ? <img src={user.photoURL} alt="User" className="w-10 h-10 rounded-full" /> : <FaUserEdit size={35} />}</div>
+          <div> {user?.photoURL ? <img src={user.photoURL} alt="User" className="w-10 h-10 rounded-full object-cover" /> : <FaUserEdit size={35} />}</div>
           {user ? (
             <button onClick={handleLogOut} className="btn btn-primary text-white text-sm btn-xs md:btn-md md:px-5">
               Log Out
