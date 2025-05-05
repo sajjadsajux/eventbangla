@@ -8,7 +8,7 @@ import { showCustomSuccessToast } from "../../Utils/SuccessToast";
 const Register = () => {
   const [showPassword, setShowPassword] = useState(false);
 
-  const { RegisterUser, setUser, UpdateUser } = use(AuthContext);
+  const { RegisterUser, setUser, UpdateUser, LoginGoogle } = use(AuthContext);
   const navigate = useNavigate();
   const handleRegister = (e) => {
     e.preventDefault();
@@ -59,6 +59,28 @@ const Register = () => {
       });
   };
 
+  const handleGoogleLogin = () => {
+    LoginGoogle()
+      .then((result) => {
+        const user = result.user;
+        UpdateUser({ displayName: user.displayName, photoURL: user.photoURL })
+          .then(() => {
+            setUser(user);
+            showCustomSuccessToast(`Your account has been created and Logged In with Google`);
+            navigate("/");
+          })
+          .catch((error) => {
+            alert(error.message);
+            setUser(user);
+            navigate("/");
+          });
+      })
+      .catch((error) => {
+        console.log(error);
+        alert(error.message);
+      });
+  };
+
   return (
     <>
       <div className="container mx-auto lg:h-screen flex justify-center items-center pb-10 lg:pt-0 px-2 md:px-0">
@@ -99,7 +121,7 @@ const Register = () => {
             <div className="flex-1 h-px sm:w-16 bg-gray-700"></div>
           </div>
           <div className="flex justify-center space-x-4">
-            <button aria-label="Login with Google" type="button" className="flex flex-row items-center justify-center w-full p-2 space-x-2 border rounded-md focus:ring-2 focus:ring-offset-1 dark:border-gray-600 focus:dark:ring-violet-600">
+            <button onClick={handleGoogleLogin} type="button" className="flex flex-row items-center justify-center w-full p-2 space-x-2 border rounded-md focus:ring-2 focus:ring-offset-1 dark:border-gray-600 focus:dark:ring-violet-600">
               <BsGoogle />
               <p>Login with Google</p>
             </button>

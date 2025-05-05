@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
-import { Link, useLoaderData, useParams } from "react-router";
-import { Bounce, toast, ToastContainer } from "react-toastify";
+import { useLoaderData, useParams } from "react-router";
+import { ToastContainer } from "react-toastify";
 import { showCustomSuccessToast } from "../../Utils/SuccessToast";
 
 const EventDetails = () => {

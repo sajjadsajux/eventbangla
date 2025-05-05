@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import { AuthContext } from "../../Provider/AuthProvider";
 import { showCustomSuccessToast } from "../../Utils/SuccessToast";
 import PasswordErrorToast from "../../Utils/PasswordErrorToast";
 import { getAuth, updateProfile } from "firebase/auth";
@@ -12,6 +11,7 @@ const Profile = () => {
     email: auth.currentUser?.email,
     photoURL: auth.currentUser?.photoURL,
   });
+  console.log(auth.currentUser);
 
   const handleSubmit = (e) => {
     // e.preventDefault();
@@ -52,7 +52,7 @@ const Profile = () => {
           </div>
           <div>
             <label className="block font-semibold">Photo URL</label>
-            <input type="text" name="photoURL" className="w-full p-2 border rounded" required />
+            <input type="url" name="photoURL" className="w-full p-2 border rounded" required />
           </div>
           <button type="submit" className="bg-primary text-white w-full py-2 rounded hover:bg-purple-700 transition">
             Save Changes

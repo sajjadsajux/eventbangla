@@ -14,10 +14,13 @@ const Navbar = () => {
       <li>
         <NavLink to="/about">About</NavLink>
       </li>
-      <li>
-        <NavLink to="/register">Register</NavLink>
-      </li>
+
       <>
+        {!user && (
+          <li>
+            <NavLink to="/register">Register</NavLink>
+          </li>
+        )}
         {user && (
           <li>
             <NavLink to="/profile">My Profile</NavLink>
@@ -30,11 +33,10 @@ const Navbar = () => {
   const handleLogOut = () => {
     LogOutUser()
       .then(() => {
-        alert("logged out");
         showCustomSuccessToast(`You have been logged out. See you again!`);
       })
       .cath((error) => {
-        alert(error.message);
+        console.log(error.message);
       });
   };
 
