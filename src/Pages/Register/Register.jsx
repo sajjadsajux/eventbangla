@@ -2,6 +2,7 @@ import React, { use, useState } from "react";
 import { BsEye, BsEyeSlash, BsGoogle } from "react-icons/bs";
 import { Link } from "react-router";
 import { AuthContext } from "../../Provider/AuthProvider";
+import PasswordErrorToast from "../../Utils/PasswordErrorToast";
 
 const Register = () => {
   const [showPassword, setShowPassword] = useState(false);
@@ -16,6 +17,26 @@ const Register = () => {
     const photo = form.photo.value;
     const password = form.password.value;
     // console.log({ name, email, photo, password });
+
+    // validate password
+
+    const hasUppercase = /[A-Z]/.test(password);
+    const hasLowercase = /[a-z]/.test(password);
+    const hasMinLength = /^.{6,}$/.test(password);
+
+    if (hasUppercase == false) {
+      PasswordErrorToast(`Must have an Uppercase letter in the password`);
+      return;
+    } else if (hasLowercase == false) {
+      PasswordErrorToast(`Must have a Lowercase letter in the password  
+`);
+
+      return;
+    } else if (hasMinLength == false) {
+      PasswordErrorToast(`Password Length must be at least 6 character`);
+
+      return;
+    }
     RegisterUser(email, password)
       .then((result) => {
         const user = result.user;

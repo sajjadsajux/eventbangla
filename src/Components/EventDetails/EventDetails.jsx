@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { Link, useLoaderData, useParams } from "react-router";
 import { Bounce, toast, ToastContainer } from "react-toastify";
+import { showCustomSuccessToast } from "../../Utils/SuccessToast";
 
 const EventDetails = () => {
   const { id } = useParams();
@@ -18,17 +19,7 @@ const EventDetails = () => {
     e.preventDefault();
     e.target.reset();
 
-    toast.success("Thank you! Your reservation is confirmed.", {
-      position: "top-right",
-      autoClose: 5000,
-      hideProgressBar: false,
-      closeOnClick: false,
-      pauseOnHover: true,
-      draggable: true,
-      progress: undefined,
-      theme: "light",
-      transition: Bounce,
-    });
+    showCustomSuccessToast(` Thank you, your seat is reserved!`);
   };
 
   return (

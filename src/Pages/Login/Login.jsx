@@ -3,7 +3,7 @@ import { Link } from "react-router";
 import { AuthContext } from "../../Provider/AuthProvider";
 
 const Login = () => {
-  const { LoginUser } = use(AuthContext);
+  const { LoginUser, setUser } = use(AuthContext);
   const handleLogin = (e) => {
     e.preventDefault();
     console.log(e.target);
@@ -11,10 +11,15 @@ const Login = () => {
     const email = form.email.value;
     const password = form.password.value;
     // console.log({ email, password });
-    LoginUser(email, password).then((result) => {
-      const user = result.user;
-      console.log(user);
-    });
+    LoginUser(email, password)
+      .then((result) => {
+        const user = result.user;
+        console.log(user);
+        setUser(user);
+      })
+      .catch((error) => {
+        alert(error.message);
+      });
   };
   return (
     <>
