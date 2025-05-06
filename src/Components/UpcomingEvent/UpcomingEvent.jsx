@@ -9,7 +9,7 @@ const UpcomingEvent = () => {
   return (
     <>
       <div>
-        <h2 className="lg:text-5xl text-center font-bold">
+        <h2 className="lg:text-5xl md:text-3xl text-2xl text-center font-bold">
           Upcoming <span className="text-primary"> Events</span>
         </h2>
         <div className="flex flex-row items justify-center items-center py-10 gap-5">

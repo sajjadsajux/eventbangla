@@ -42,7 +42,7 @@ const Navbar = () => {
 
   return (
     <>
-      <div className="navbar px-0  container mx-auto ">
+      <div className="navbar px-0  container mx-auto py-4 ">
         <div className="navbar-start">
           <div className="dropdown">
             <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden p-0 mr-2 lg:mr-0">
@@ -55,13 +55,15 @@ const Navbar = () => {
               {linksAll}
             </ul>
           </div>
-          <a className=" text-xl md:text-2xl lg:text-3xl font-bold">EventBangla</a>
+          <a className=" text-xl md:text-2xl lg:text-3xl font-bold bg-primary text-white py-2 px-2 rounded-2xl">
+            <span className="">Event</span>Bangla
+          </a>
         </div>
         <div className="navbar-center hidden lg:flex">
-          <ul className="menu menu-horizontal px-1 font-semibold md:text-xl">{linksAll}</ul>
+          <ul className="menu menu-horizontal px-1 font-semibold md:text-xl bg-primary text-white rounded-4xl">{linksAll}</ul>
         </div>
-        <div className="navbar-end flex gap-5">
-          <div> {user?.photoURL ? <img src={user.photoURL} alt="User" className="w-10 h-10 rounded-full object-cover" /> : <FaUserEdit size={35} />}</div>
+        <div className="navbar-end flex gap-5 ">
+          <div className=""> {user?.photoURL ? <img src={user.photoURL} alt="User" className="w-10 h-10 rounded-full object-cover" /> : <FaUserEdit size={35} />}</div>
           {user ? (
             <button onClick={handleLogOut} className="btn btn-primary text-white text-sm btn-xs md:btn-md md:px-5">
               Log Out

@@ -9,7 +9,7 @@ const Footer = () => {
         <div className="container flex flex-col justify-between  py-10 mx-auto space-y-8 lg:flex-row lg:space-y-0">
           <div className="lg:w-1/3 space-y-5 text-center lg:text-start">
             <Link className="flex   space-x-3 lg:justify-start justify-center">
-              <span className="self-center md:text-2xl lg:text-3xl font-bold">EventBangla</span>
+              <span className="self-center md:text-2xl lg:text-3xl font-bold bg-white text-primary px-2 py-2 rounded-2xl">EventBangla</span>
             </Link>
             <p>Find Your Next Celebration, Right Here in Bangladesh!</p>
           </div>
@@ -63,7 +63,7 @@ const Footer = () => {
             </div>
           </div>
         </div>
-        <div className="py-6 text-sm text-center ">© 2025 Company Co. All rights reserved.</div>
+        <div className="py-6 text-sm text-center ">© EventBangla 2025 All rights reserved.</div>
       </footer>
     </>
   );
