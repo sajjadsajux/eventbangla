@@ -41,24 +41,25 @@ const Profile = () => {
 
   return (
     <div>
-      <div className="max-w-xl mx-auto mt-10 bg-white p-6 rounded-xl shadow-md space-y-6">
+      <div className="max-w-xl mx-auto mt-10 bg-white p-6 rounded-xl shadow-md space-y-6 my-10 outline outline-primary transform hover:scale-105 transition duration-300 ">
         <div className="text-center space-y-2">
-          <img src={userInfo.photoURL} alt="User" className="w-60 h-60 mx-auto rounded-full object-cover" />
+          <img src={userInfo.photoURL} alt="User" className="w-60 h-60 mx-auto rounded-2xl object-cover transform hover:scale-105 transition duration-300" />
           <h2 className="text-xl font-bold">{userInfo.name}</h2>
           <p className="text-gray-500">{userInfo.email}</p>
         </div>
 
-        <form onSubmit={handleSubmit} className="space-y-4">
+        <form onSubmit={handleSubmit} className="space-y-4 md:px-16">
           <div>
-            <label className="block font-semibold">Name</label>
-            <input type="text" name="name" className="w-full p-2 border rounded" required />
+            <h2 className="text-center font-bold text-primary md:text-xl">Update Your Profile</h2>
+            <label className="block font-semibold">Name:</label>
+            <input type="text" name="name" placeholder="Type Your Desired Name" className="w-full p-1 border rounded" required />
           </div>
           <div>
-            <label className="block font-semibold">Photo URL</label>
-            <input type="url" name="photoURL" className="w-full p-2 border rounded" required />
+            <label className="block font-semibold">Photo URL:</label>
+            <input type="url" name="photoURL" placeholder="Enter Valid Image URL" className="w-full p-1 border rounded" required />
           </div>
-          <button type="submit" className="bg-primary text-white w-full py-2 rounded hover:bg-purple-700 transition">
-            Save Changes
+          <button type="submit" className="bg-primary text-white w-full  py-2 rounded hover:bg-purple-700 transition">
+            Update
           </button>
         </form>
       </div>

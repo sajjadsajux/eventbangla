@@ -1,99 +1,69 @@
 import React from "react";
 import { FaFacebook, FaInstagram, FaTwitter } from "react-icons/fa";
-import { Link } from "react-router";
+import { Link, NavLink } from "react-router";
 
 const Footer = () => {
   return (
     <>
-      <footer className=" divide-y bg-gray-800 text-gray-100">
-        <div className="container flex flex-col justify-between py-10 mx-auto space-y-8 lg:flex-row lg:space-y-0">
-          <div className="lg:w-1/3">
-            <a rel="noopener noreferrer" href="#" className="flex   space-x-3 lg:justify-start">
-              <span className="self-center text-2xl font-semibold">Brand name</span>
-            </a>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. <br />
-              Quae eius dignissimos voluptatem id quo corporis obcaecati consequatur nostrum ducimus laborum.
-            </p>
+      <footer className=" divide-y bg-primary text-white p-2 lg:p-0">
+        <div className="container flex flex-col justify-between  py-10 mx-auto space-y-8 lg:flex-row lg:space-y-0">
+          <div className="lg:w-1/3 space-y-5 text-center lg:text-start">
+            <Link className="flex   space-x-3 lg:justify-start justify-center">
+              <span className="self-center md:text-2xl lg:text-3xl font-bold">EventBangla</span>
+            </Link>
+            <p>Find Your Next Celebration, Right Here in Bangladesh!</p>
           </div>
-          <div className="grid grid-cols-2 text-sm gap-x-3 gap-y-8 lg:w-2/3 sm:grid-cols-4">
+          <div className="flex  justify-between text-center md:text-start text-sm gap-x-3 gap-y-8 lg:w-2/3 ">
             <div className="space-y-3">
-              <h3 className="tracking-wide uppercase text-gray-50">Product</h3>
+              <h3 className="tracking-wide uppercase ">Main</h3>
               <ul className="space-y-1">
                 <li>
-                  <a rel="noopener noreferrer" href="#">
-                    Features
-                  </a>
+                  <NavLink to="/">Home</NavLink>
                 </li>
                 <li>
-                  <a rel="noopener noreferrer" href="#">
-                    Integrations
-                  </a>
-                </li>
-                <li>
-                  <a rel="noopener noreferrer" href="#">
-                    Pricing
-                  </a>
-                </li>
-                <li>
-                  <a rel="noopener noreferrer" href="#">
-                    FAQ
-                  </a>
+                  <NavLink to="/about">About</NavLink>
                 </li>
               </ul>
             </div>
             <div className="space-y-3">
-              <h3 className="tracking-wide uppercase text-gray-50">Company</h3>
+              <h3 className="tracking-wide uppercase ">Support / Help</h3>
               <ul className="space-y-1">
                 <li>
-                  <a rel="noopener noreferrer" href="#">
-                    Privacy
-                  </a>
+                  <Link>FAQ</Link>
                 </li>
                 <li>
-                  <a rel="noopener noreferrer" href="#">
-                    Terms of Service
-                  </a>
+                  <Link>Contact Us</Link>
                 </li>
               </ul>
             </div>
             <div className="space-y-3">
-              <h3 className="uppercase text-gray-50">Developers</h3>
+              <h3 className="uppercase ">Website Policies</h3>
               <ul className="space-y-1">
                 <li>
-                  <a rel="noopener noreferrer" href="#">
-                    Public API
-                  </a>
+                  <Link>Terms and Conditions</Link>
                 </li>
                 <li>
-                  <a rel="noopener noreferrer" href="#">
-                    Documentation
-                  </a>
-                </li>
-                <li>
-                  <a rel="noopener noreferrer" href="#">
-                    Guides
-                  </a>
+                  <Link>Privacy Policy</Link>
                 </li>
               </ul>
             </div>
             <div className="space-y-3">
-              <div className="uppercase text-gray-50">Social media</div>
-              <div className="flex  justify-start space-x-3">
-                <Link>
+              <div className="uppercase ">Social media</div>
+              <div className="flex flex-col md:flex-row justify-center items-center space-x-3 ">
+                <a>
                   <FaFacebook size={30}></FaFacebook>
-                </Link>
-                <Link>
+                </a>
+                <a>
                   <FaInstagram size={30}></FaInstagram>
-                </Link>
-                <Link>
+                </a>
+                <a>
                   <FaTwitter size={30}></FaTwitter>
-                </Link>
+                </a>
               </div>
             </div>
           </div>
         </div>
-        <div className="py-6 text-sm text-center text-gray-400">© 1968 Company Co. All rights reserved.</div>
+        <div className="py-6 text-sm text-center ">© 2025 Company Co. All rights reserved.</div>
       </footer>
     </>
   );

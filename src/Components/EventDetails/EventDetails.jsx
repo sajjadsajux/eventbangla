@@ -27,7 +27,7 @@ const EventDetails = () => {
   return (
     <>
       <section>
-        <div className="bg-[#f8f7fc] py-10 px-4 ">
+        <div className="bg-[#f8f7fc] py-8 px-4 ">
           <div className="container mx-auto grid grid-cols-1 lg:grid-cols-4 gap-8 ">
             {/* Left Side: Event Content */}
             <div className="lg:col-span-3 bg-white p-6 rounded-2xl shadow-md ">
