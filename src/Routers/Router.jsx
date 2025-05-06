@@ -13,6 +13,7 @@ import Terms from "../Pages/Terms/Terms";
 import PrivacyPolicy from "../Pages/PrivacyPolicy/PrivacyPolicy";
 import Faq from "../Pages/Faq/Faq";
 import Contact from "../Pages/Contact/Contact";
+import MyEvents from "../Pages/MyEvents/MyEvents";
 
 const router = createBrowserRouter([
   {
@@ -55,6 +56,10 @@ const router = createBrowserRouter([
       {
         path: "/contact",
         element: <Contact></Contact>,
+      },
+      {
+        path: "/my-events",
+        element: <MyEvents></MyEvents>,
       },
       {
         path: "/profile",

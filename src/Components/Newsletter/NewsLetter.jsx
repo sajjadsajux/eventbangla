@@ -1,8 +1,14 @@
 import React from "react";
 import { IoStatsChart } from "react-icons/io5";
 import { SlEnvolopeLetter } from "react-icons/sl";
+import { showCustomSuccessToast } from "../../Utils/SuccessToast";
 
 const NewsLetter = () => {
+  const HandleNewsSubmit = (e) => {
+    e.preventDefault();
+    showCustomSuccessToast("Thanks for subscribing to our newsletter!");
+    e.target.reset();
+  };
   return (
     <>
       <h2 className="lg:text-5xl md:text-3xl text-2xl text-center font-bold">
@@ -43,7 +49,7 @@ const NewsLetter = () => {
                 </svg>
                 <div className="relative bg-primary rounded shadow-2xl p-7 sm:p-10">
                   <h3 className="mb-4 text-xl font-semibold sm:text-center sm:mb-6 sm:text-2xl text-white">Sign up for updates</h3>
-                  <form>
+                  <form onSubmit={HandleNewsSubmit}>
                     <div className="mb-1 sm:mb-2">
                       <label htmlFor="name" className="inline-block mb-1 font-medium text-white">
                         Name
@@ -71,7 +77,7 @@ const NewsLetter = () => {
                       />
                     </div>
                     <div className="mt-4 mb-2 sm:mb-4">
-                      <button type="submit" className="inline-flex items-center justify-center w-full h-12 px-6 font-medium tracking-wide  transition duration-200 rounded shadow-md bg-white hover:bg-deep-purple-accent-700 focus:shadow-outline focus:outline-none text-primary">
+                      <button type="submit" className="btn-primary  w-full h-12 px-6 font-medium  shadow-md bg-white hover:bg-green-600  hover:text-white hover:cursor-pointer">
                         Subscribe
                       </button>
                     </div>
