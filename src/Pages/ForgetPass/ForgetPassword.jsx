@@ -19,7 +19,6 @@ const ForgetPassword = () => {
     e.preventDefault();
     ResetPassword(email)
       .then(() => {
-        alert("reset email sent");
         window.location.href = "https://mail.google.com";
       })
       .catch((error) => {

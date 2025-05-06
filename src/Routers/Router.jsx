@@ -9,6 +9,10 @@ import Register from "../Pages/Register/Register";
 import ForgetPassword from "../Pages/ForgetPass/ForgetPassword";
 import PrivateRoute from "../Provider/PrivateRoute";
 import Profile from "../Pages/Profile/Profile";
+import Terms from "../Pages/Terms/Terms";
+import PrivacyPolicy from "../Pages/PrivacyPolicy/PrivacyPolicy";
+import Faq from "../Pages/Faq/Faq";
+import Contact from "../Pages/Contact/Contact";
 
 const router = createBrowserRouter([
   {
@@ -35,6 +39,22 @@ const router = createBrowserRouter([
       {
         path: "/forget-password",
         element: <ForgetPassword></ForgetPassword>,
+      },
+      {
+        path: "/terms-and-conditions",
+        element: <Terms></Terms>,
+      },
+      {
+        path: "/privacy-policy",
+        element: <PrivacyPolicy></PrivacyPolicy>,
+      },
+      {
+        path: "/faq",
+        element: <Faq></Faq>,
+      },
+      {
+        path: "/contact",
+        element: <Contact></Contact>,
       },
       {
         path: "/profile",

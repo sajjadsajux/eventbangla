@@ -31,9 +31,9 @@ const EventDetails = () => {
           <div className="container mx-auto grid grid-cols-1 lg:grid-cols-4 gap-8 ">
             {/* Left Side: Event Content */}
             <div className="lg:col-span-3 bg-white p-6 rounded-2xl shadow-md ">
-              <img src={thumbnail} alt="Event Banner" className="w-full md:h-[60vh] rounded-xl mb-6" />
+              <img src={thumbnail} alt="Event Banner" className="w-full md:h-[55vh] rounded-xl mb-6 transform hover:scale-105 transition duration-300" />
               <div className="flex justify-between items-center">
-                <h2 className="text-2xl font-bold mb-4">{name}</h2>
+                <h2 className="text-2xl font-bold mb-4 text-primary">{name}</h2>
                 <span className="inline-block text-xs px-2 py-1 bg-purple-100 text-primary rounded-full lg:text-xl">{category}</span>
               </div>
 
@@ -41,9 +41,11 @@ const EventDetails = () => {
             </div>
 
             {/* Right Side: 3 Sections */}
-            <div className="space-y-5">
+            <div className="space-y-2">
               {/* Event Info */}
-              <div className="bg-white p-6 rounded-2xl shadow-md space-y-3">
+              <div className="bg-white p-6 rounded-2xl shadow-md space-y-3 ">
+                <h3 className="text-lg font-bold text-primary">Event Info</h3>
+
                 <p className="">
                   <span className="font-semibold">Date :</span> {date}
                 </p>
@@ -59,8 +61,8 @@ const EventDetails = () => {
               </div>
 
               {/* Ticket Info */}
-              <div className="bg-white p-6 rounded-2xl shadow-md space-y-3">
-                <h3 className="text-lg font-bold">Tickets</h3>
+              <div className="bg-white p-6 rounded-2xl shadow-md space-y-3 ">
+                <h3 className="text-lg font-bold text-primary">Tickets</h3>
                 <p className="font-medium">
                   Seats Available: <strong>{seatsAvailable} </strong> Only
                 </p>
@@ -69,20 +71,20 @@ const EventDetails = () => {
                 </p>
               </div>
               {/* Ticket Info */}
-              <div className="bg-white p-6 rounded-2xl shadow-md space-y-3">
-                <h3 className="text-lg font-bold">Registration Deadline</h3>
+              <div className="bg-white p-6 rounded-2xl shadow-md space-y-3 ">
+                <h3 className="text-lg font-bold text-primary">Registration Deadline</h3>
                 <p>
                   <span className="font-bold">Hurry Up!</span> – Register Before <strong>{registrationDeadline}</strong> to Secure Your Spot at the <strong>{name}</strong>
                 </p>
               </div>
 
               {/* Reservation Form */}
-              <div className="bg-white p-6 rounded-2xl shadow-md space-y-3">
-                <h3 className="text-lg font-bold">Reserve Your Seat</h3>
-                <form className="space-y-4 " onSubmit={handleReserve}>
-                  <input name="email" type="text" placeholder="Your Name" className="w-full px-4 py-2 border rounded" required />
-                  <input name="email" type="email" placeholder="Your Email" className="w-full px-4 py-2 border rounded" required />
-                  <button type="submit" className="w-full bg-primary text-white py-2 rounded hover:bg-purple-700 transition">
+              <div className="bg-white p-6 rounded-2xl shadow-md space-y-3 ">
+                <h3 className="text-lg font-bold text-primary">Reserve Your Seat</h3>
+                <form className="space-y-3 " onSubmit={handleReserve}>
+                  <input name="email" type="text" placeholder="Your Name" className="w-full px-4 py-1 border rounded" required />
+                  <input name="email" type="email" placeholder="Your Email" className="w-full px-4 py-1 border rounded" required />
+                  <button type="submit" className="w-full bg-primary font-semibold text-white py-2 rounded hover:bg-green-600 transition">
                     Reserve Seat
                   </button>
                   <ToastContainer></ToastContainer>

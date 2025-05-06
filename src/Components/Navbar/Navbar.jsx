@@ -16,11 +16,11 @@ const Navbar = () => {
       </li>
 
       <>
-        {!user && (
+        {/* {!user && (
           <li>
             <NavLink to="/register">Register</NavLink>
           </li>
-        )}
+        )} */}
         {user && (
           <li>
             <NavLink to="/profile">My Profile</NavLink>
@@ -63,13 +63,13 @@ const Navbar = () => {
           <ul className="menu menu-horizontal px-1 font-semibold md:text-xl bg-primary text-white rounded-4xl">{linksAll}</ul>
         </div>
         <div className="navbar-end flex gap-5 ">
-          <div className=""> {user?.photoURL ? <img src={user.photoURL} alt="User" className="w-10 h-10 rounded-full object-cover" /> : <FaUserEdit size={35} />}</div>
+          <div className="hover:cursor-default"> {user?.photoURL ? <img src={user.photoURL} alt="User" className="w-12 h-12 rounded-full object-cover " title={user.displayName} /> : <FaUserEdit size={35} title={"No User"} />}</div>
           {user ? (
-            <button onClick={handleLogOut} className="btn btn-primary text-white text-sm btn-xs md:btn-md md:px-5">
+            <button onClick={handleLogOut} className="btn btn-primary text-white text-sm md:text-base btn-xs md:btn-md md:px-5 rounded-2xl hover:bg-red-600">
               Log Out
             </button>
           ) : (
-            <NavLink to="/login" className="btn btn-primary text-white text-sm btn-xs md:btn-md md:px-5">
+            <NavLink to="/login" className="btn btn-primary text-white text-sm md:text-base btn-xs md:btn-md md:px-5 rounded-2xl hover:bg-green-600">
               Login
             </NavLink>
           )}

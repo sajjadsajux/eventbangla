@@ -10,6 +10,7 @@ const Register = () => {
   DynamicTittle("Register");
 
   const [showPassword, setShowPassword] = useState(false);
+  const [showerror, setShowError] = useState(false);
 
   const { RegisterUser, setUser, UpdateUser, LoginGoogle } = use(AuthContext);
   const navigate = useNavigate();
@@ -24,21 +25,22 @@ const Register = () => {
     // console.log({ name, email, photo, password });
 
     // validate password
-
     const hasUppercase = /[A-Z]/.test(password);
     const hasLowercase = /[a-z]/.test(password);
     const hasMinLength = /^.{6,}$/.test(password);
 
     if (hasUppercase == false) {
-      PasswordErrorToast(`Must have an Uppercase letter in the password`);
+      // PasswordErrorToast(`Must have an Uppercase letter in the password`);
+      setShowError("Must have an Uppercase letter in the password");
       return;
     } else if (hasLowercase == false) {
-      PasswordErrorToast(`Must have a Lowercase letter in the password  
-`);
+      // PasswordErrorToast(`Must have a Lowercase letter in the password  `);
+      setShowError("Must have a Lowercase letter in the password");
 
       return;
     } else if (hasMinLength == false) {
-      PasswordErrorToast(`Password Length must be at least 6 character`);
+      // PasswordErrorToast(`Password Length must be at least 6 character`);
+      setShowError("Password Length must be at least 6 character");
 
       return;
     }
@@ -113,7 +115,7 @@ const Register = () => {
                 {showPassword ? <BsEyeSlash /> : <BsEye />}
               </span>
             </div>
-
+            {showerror && <p className="text-red-500 ">{showerror}</p>}
             <button type="submit" className="block w-full p-3 text-center rounded-sm  bg-primary">
               Register Your Account
             </button>

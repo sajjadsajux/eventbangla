@@ -15,7 +15,7 @@ const Slider = () => {
   };
   return (
     <>
-      <div className=" md:h-[70vh] relative">
+      <div className=" md:h-[70vh] ">
         <Swiper
           spaceBetween={30}
           centeredSlides={true}
@@ -54,15 +54,6 @@ const Slider = () => {
             <span ref={progressContent}></span>
           </div>
         </Swiper>
-        {/* <div className="absolute top-20 right-2/5 z-2">
-          <div className="hero-content text-neutral-content text-center">
-            <div className="max-w-md">
-              <h1 className="mb-5 lg:text-5xl font-bold">Find Your Next Celebration, Right Here in Bangladesh!</h1>
-              <p className="mb-5 text-sm md:text-base">Whether it’s a colorful festival, a tech conference, a foodie gathering, or a soulful music night — we bring you the best events happening across Bangladesh. Stay updated, book your spot, and make every weekend count!</p>
-              <button className="btn btn-primary">Get Started</button>
-            </div>
-          </div>
-        </div> */}
       </div>
     </>
   );

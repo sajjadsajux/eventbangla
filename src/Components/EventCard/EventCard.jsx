@@ -13,10 +13,10 @@ const EventCard = ({ event }) => {
       <div className="p-4 space-y-2">
         <span className="inline-block text-xs px-2 py-1 bg-purple-100 text-primary rounded-full">{category}</span>
         <h2 className="text-lg font-bold ">{name}</h2>
-        <p className="text-sm font-semibold">Data: {date}</p>
+        <p className="text-sm font-semibold">Date: {date}</p>
         <p className="text-sm font-semibold">Location: {location}</p>
         <p className="text-sm font-semibold">Entry Fee: {entryFee === 0 ? "Free" : `${entryFee}`}</p>
-        <Link to={`/event/${id}`} className="inline-block mt-3 text-sm text-white bg-primary hover:bg-purple-700 px-4 py-2 rounded-md transition">
+        <Link to={`/event/${id}`} className="inline-block mt-3 text-sm text-white bg-primary hover:bg-green-600 px-4 py-2 rounded-md transition">
           View More
         </Link>
       </div>

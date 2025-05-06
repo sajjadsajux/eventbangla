@@ -11,4 +11,5 @@
 
 a.active {
   @apply underline;
+  color: #7cfc00;
 }
