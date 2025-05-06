@@ -1,9 +1,7 @@
 import React, { useEffect } from "react";
 import DynamicTittle from "../../Utils/DynamicTittle";
 import Aos from "aos";
-{
-  /* <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>; */
-}
+
 import "aos/dist/aos.css"; // Import AOS CSS
 
 const About = () => {
@@ -11,11 +9,12 @@ const About = () => {
 
   useEffect(() => {
     Aos.init({
-      offset: 10,
       duration: 600,
+      offset: 200,
       easing: "ease-in-sine",
-      delay: 50,
+      delay: 100,
       once: false,
+      mirror: true,
     });
   }, []);
   return (
