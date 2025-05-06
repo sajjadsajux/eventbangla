@@ -15,11 +15,11 @@ const Contact = () => {
   };
   return (
     <>
-      <div className="bg-gray-50 text-gray-800 px-6 md:px-20 py-12 max-w-6xl mx-auto">
+      <div className="bg-gray-50 text-gray-800 px-6 md:px-20 py-12 max-w-6xl mx-auto ">
         <h1 className="text-4xl font-bold mb-4 text-center text-primary">Get in Touch</h1>
         <p className="text-center mb-10 text-lg text-gray-600">Have a question, suggestion, or need help? We're here to listen and help you out.</p>
 
-        <div className="max-w-md mx-auto">
+        <div className="max-w-md mx-auto transform hover:scale-105 transition duration-300">
           {/* Contact Form */}
           <form onSubmit={HandleFormSub} className="bg-white p-6 rounded-lg shadow-md space-y-4">
             <div>
