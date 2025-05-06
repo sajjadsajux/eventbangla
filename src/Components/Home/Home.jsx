@@ -12,15 +12,12 @@ const Home = () => {
   return (
     <>
       <section className=" ">
-        <div className="  ">{/* <Banner></Banner> */}</div>
-        <div className="">
-          <Slider></Slider>
-        </div>
+        <Slider></Slider>
       </section>
       <section className="py-12">
         <UpcomingEvent></UpcomingEvent>
       </section>
-      <section>
+      <section className="">
         <Stats></Stats>
       </section>
       <section className="py-12">

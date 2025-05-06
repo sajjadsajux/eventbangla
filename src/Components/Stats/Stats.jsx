@@ -9,7 +9,7 @@ import CountUp from "react-countup";
 const Stats = () => {
   return (
     <>
-      <h2 className="lg:text-5xl md:text-3xl text-2xl text-center font-bold">
+      <h2 className="lg:text-5xl md:text-3xl text-2xl text-center font-bold ">
         Our <span className="text-primary"> Journey So Far</span>
       </h2>
       <div className="flex flex-row items justify-center items-center py-10 gap-5">

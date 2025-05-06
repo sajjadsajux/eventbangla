@@ -29,7 +29,7 @@ const Footer = () => {
               <h3 className="tracking-wide uppercase ">Support / Help</h3>
               <ul className="space-y-1">
                 <li>
-                  <Link to="/terms-and-conditions">FAQ</Link>
+                  <Link to="/faqs">FAQs</Link>
                 </li>
                 <li>
                   <Link to="/terms-and-conditions">Contact Us</Link>

@@ -4,6 +4,7 @@ import PasswordErrorToast from "../../Utils/PasswordErrorToast";
 import { getAuth, updateProfile } from "firebase/auth";
 import app from "../../Firebase/firebase.config";
 import DynamicTittle from "../../Utils/DynamicTittle";
+import { TfiEmail } from "react-icons/tfi";
 const auth = getAuth(app);
 
 const Profile = () => {
@@ -40,12 +41,15 @@ const Profile = () => {
   };
 
   return (
-    <div className="bg-[#f8f7fc] lg:py-2">
-      <div className="max-w-xl mx-auto mt-10 bg-white p-6 rounded-xl shadow-md space-y-6 my-10 outline outline-primary transform hover:scale-105 transition duration-300 shadow-md">
+    <div className="bg-[#f8f7fc] lg:py-2 py-1 px-2  shadow-md">
+      <div className="max-w-xl  mx-auto mt-10 bg-white p-6 rounded-xl  space-y-6 my-10  transform hover:scale-105 transition duration-300 shadow-md ">
         <div className="text-center space-y-2">
           <img src={userInfo.photoURL} alt="User" className="w-60 h-60 mx-auto rounded-2xl object-cover transform hover:scale-105 transition duration-300" />
           <h2 className="text-xl font-bold">{userInfo.name}</h2>
-          <p className="text-gray-500">{userInfo.email}</p>
+          <p className="flex justify-center items-center gap-2">
+            <TfiEmail size={20} />
+            {userInfo.email}
+          </p>
         </div>
 
         <form onSubmit={handleSubmit} className="space-y-4 md:px-16">

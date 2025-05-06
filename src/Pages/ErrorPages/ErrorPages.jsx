@@ -1,20 +1,20 @@
 import React from "react";
 import { Link } from "react-router";
 import DynamicTittle from "../../Utils/DynamicTittle";
+import { MdError } from "react-icons/md";
 
 const ErrorPages = () => {
   DynamicTittle("404 Page");
 
   return (
-    <section className="flex items-center h-screen p-16 bg-gray-900 text-gray-100">
-      <div className="container flex flex-col items-center justify-center px-5 mx-auto my-8">
-        <div className="max-w-md text-center">
-          <h2 className="mb-8 font-extrabold text-9xl text-gray-600">
-            <span className="sr-only">Error</span>404
-          </h2>
-          <p className="text-2xl font-semibold md:text-3xl">Sorry, we couldn't find this page.</p>
-          <p className="mt-4 mb-8 text-gray-400">But dont worry, you can find plenty of other things on our homepage.</p>
-          <Link to="/" className="px-8 py-3 font-semibold rounded bg-violet-400 text-gray-900">
+    <section className="flex items-center h-screen   ">
+      <div className="container flex flex-col items-center justify-center  mx-auto my-8">
+        <div className="text-center transition-all duration-500 ease-in-out">
+          <h2 className="font-extrabold md:text-7xl text-4xl transition-transform duration-300 hover:scale-105">Oops!</h2>
+          <h2 className="mb-8 font-extrabold md:text-7xl text-4xl transition-transform duration-300 hover:scale-105">Page Not Found</h2>
+          <p className="text-2xl font-semibold md:text-3xl px-2 transition-transform duration-300 hover:scale-105">Sorry, we couldn't find the event or page you're looking for.</p>
+          <p className="mt-4 mb-8 px-2 transition-transform duration-300 hover:scale-105">But don’t worry, you can find plenty of other things on our homepage.</p>
+          <Link to="/" className="px-8 py-3 font-semibold rounded bg-primary text-white hover:bg-green-600 transition-colors duration-300">
             Back to homepage
           </Link>
         </div>
