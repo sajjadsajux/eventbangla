@@ -12,8 +12,8 @@ const ErrorPages = () => {
         <div className="text-center transition-all duration-500 ease-in-out">
           <h2 className="font-extrabold md:text-7xl text-4xl transition-transform duration-300 hover:scale-105">Oops!</h2>
           <h2 className="mb-8 font-extrabold md:text-7xl text-4xl transition-transform duration-300 hover:scale-105">Page Not Found</h2>
-          <p className="text-2xl font-semibold md:text-3xl px-2 transition-transform duration-300 hover:scale-105">Sorry, we couldn't find the event or page you're looking for.</p>
-          <p className="mt-4 mb-8 px-2 transition-transform duration-300 hover:scale-105">But don’t worry, you can find plenty of other things on our homepage.</p>
+          <p className="mt-4 mb-8 text-2xl font-semibold md:text-3xl px-2 transition-transform duration-300 hover:scale-105">Sorry, we couldn't find the event or page you're looking for.</p>
+
           <Link to="/" className="px-8 py-3 font-semibold rounded bg-primary text-white hover:bg-green-600 transition-colors duration-300">
             Back to homepage
           </Link>

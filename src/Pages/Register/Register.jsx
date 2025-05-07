@@ -16,7 +16,7 @@ const Register = () => {
   const navigate = useNavigate();
   const handleRegister = (e) => {
     e.preventDefault();
-    console.log(e.target);
+    // console.log(e.target);
     const form = e.target;
     const name = form.name.value;
     const email = form.email.value;
@@ -47,7 +47,8 @@ const Register = () => {
     RegisterUser(email, password)
       .then((result) => {
         const user = result.user;
-        console.log(user);
+        // console.log(user);
+        setShowError(false);
         UpdateUser({ displayName: name, photoURL: photo })
           .then(() => {
             setUser({ ...user, displayName: name, photoURL: photo });
@@ -57,7 +58,7 @@ const Register = () => {
             alert(error.message);
             setUser(user);
           });
-        showCustomSuccessToast(` Your account has been created successfully`);
+        showCustomSuccessToast(`Congrats! Your account has been created successfully `);
       })
       .catch((error) => {
         alert(error.message);
@@ -75,20 +76,23 @@ const Register = () => {
             navigate("/");
           })
           .catch((error) => {
-            alert(error.message);
+            const errorCode = error.code.replace("auth/", "");
+            PasswordErrorToast(errorCode);
             setUser(user);
             navigate("/");
           });
       })
       .catch((error) => {
-        console.log(error);
-        alert(error.message);
+        // console.log(error);
+        // alert(error.message);
+        const errorCode = error.code.replace("auth/", "");
+        PasswordErrorToast(errorCode);
       });
   };
 
   return (
     <>
-      <div className="container mx-auto lg:h-screen flex justify-center items-center pb-10 lg:pt-0 px-2 md:px-0">
+      <div className="container mx-auto  flex justify-center items-center pb-10 lg:pt-0 px-2 md:px-0">
         <div className="w-full max-w-md mx-auto p-8  space-y-3 rounded-xl bg-gray-900 text-gray-100">
           <h1 className="text-2xl font-bold text-center">Register Page</h1>
           <form onSubmit={handleRegister} className="space-y-6">
@@ -116,7 +120,7 @@ const Register = () => {
               </span>
             </div>
             {showerror && <p className="text-red-500 ">{showerror}</p>}
-            <button type="submit" className="block w-full p-3 text-center rounded-sm  bg-primary">
+            <button type="submit" className="block w-full p-3 text-center rounded-sm  bg-primary  hover:bg-green-600 hover:cursor-pointer">
               Register Your Account
             </button>
           </form>
@@ -126,7 +130,7 @@ const Register = () => {
             <div className="flex-1 h-px sm:w-16 bg-gray-700"></div>
           </div>
           <div className="flex justify-center space-x-4">
-            <button onClick={handleGoogleLogin} type="button" className="flex flex-row items-center justify-center w-full p-2 space-x-2 border rounded-md focus:ring-2 focus:ring-offset-1 dark:border-gray-600 focus:dark:ring-violet-600">
+            <button onClick={handleGoogleLogin} type="button" className="flex flex-row items-center justify-center w-full p-2 space-x-2 border hover:cursor-pointer hover:bg-green-600">
               <BsGoogle />
               <p>Login with Google</p>
             </button>

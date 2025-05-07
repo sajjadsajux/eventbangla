@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router";
 
 const EventCard = ({ event }) => {
-  console.log(event);
+  // console.log(event);
   const { id, thumbnail, name, category, date, location, entryFee } = event;
 
   return (

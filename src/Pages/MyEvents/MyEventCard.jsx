@@ -2,7 +2,7 @@ import React from "react";
 
 const MyEventCard = ({ event }) => {
   return (
-    <div className="bg-white rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 p-6 flex flex-col">
+    <div className="bg-white rounded-lg shadow-lg transform hover:scale-105 transition duration-300 p-6 flex flex-col">
       {/* Event Name */}
       <h2 className="text-xl font-semibold text-gray-800 mb-2 truncate">{event.title}</h2>
       {/* Event Location */}
@@ -12,7 +12,7 @@ const MyEventCard = ({ event }) => {
       {/* Event Description */}
       <p className="text-gray-600 text-sm mb-4 line-clamp-3">{event.description}</p>
       {/* Event Date */}
-      <p className="text-gray-600 text-sm mb-4">{event.location}</p>
+      <p className="text-gray-600 text-sm mb-4 font-semibold">{event.location}</p>
     </div>
   );
 };

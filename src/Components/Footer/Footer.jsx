@@ -5,7 +5,7 @@ import { Link, NavLink } from "react-router";
 const Footer = () => {
   return (
     <>
-      <footer className=" divide-y bg-primary text-white p-2 lg:p-0">
+      <footer className=" divide-y bg-primary text-white p-2 lg:p-0 px-2 lg:px-0">
         <div className="container flex flex-col justify-between  py-10 mx-auto space-y-8 lg:flex-row lg:space-y-0">
           <div className="lg:w-1/3 space-y-5 text-center lg:text-start">
             <Link className="flex   space-x-3 lg:justify-start justify-center">
@@ -49,7 +49,7 @@ const Footer = () => {
             </div>
             <div className="space-y-3">
               <div className="uppercase ">Social media</div>
-              <div className="flex flex-col lg:flex-row justify-center items-center  space-x-3 space-y-3 lg:space-y-0 ">
+              <div className="flex flex-col lg:flex-row justify-center items-center justify-items-center  lg:space-x-3 space-y-3 lg:space-y-0 ">
                 <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer">
                   <FaFacebook size={30}></FaFacebook>
                 </a>

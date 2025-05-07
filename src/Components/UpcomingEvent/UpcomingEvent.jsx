@@ -5,7 +5,7 @@ import EventCard from "../EventCard/EventCard";
 
 const UpcomingEvent = () => {
   const eventData = useLoaderData();
-  console.log(eventData);
+  // console.log(eventData);
   return (
     <>
       <div>

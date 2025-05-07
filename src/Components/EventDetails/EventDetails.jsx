@@ -11,7 +11,7 @@ const EventDetails = () => {
   // console.log(id, data);
   useEffect(() => {
     const uniqueEvent = data.find((uEvent) => uEvent.id == id);
-    console.log(uniqueEvent);
+    // console.log(uniqueEvent);
     setUEvent(uniqueEvent);
   }, [data, id]);
   const { thumbnail, name, category, date, time, location, entryFee, shortDescription, seatsAvailable, organizer, registrationDeadline } = uEvent;
@@ -20,7 +20,7 @@ const EventDetails = () => {
     e.preventDefault();
     e.target.reset();
 
-    showCustomSuccessToast(` Thank you, your seat is reserved!`);
+    showCustomSuccessToast(` Thanks! Your seat is booked — see you soon!`);
   };
   DynamicTittle(`${name}`);
 

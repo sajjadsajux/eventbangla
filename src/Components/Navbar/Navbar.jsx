@@ -3,6 +3,7 @@ import { FaUserEdit } from "react-icons/fa";
 import { NavLink } from "react-router";
 import { AuthContext } from "../../Provider/AuthProvider";
 import { showCustomSuccessToast } from "../../Utils/SuccessToast";
+import PasswordErrorToast from "../../Utils/PasswordErrorToast";
 
 const Navbar = () => {
   const { user, LogOutUser } = use(AuthContext);
@@ -41,13 +42,14 @@ const Navbar = () => {
         showCustomSuccessToast(`You have been logged out. See you again!`);
       })
       .cath((error) => {
-        console.log(error.message);
+        const errorCode = error.code.replace("auth/", "");
+        PasswordErrorToast(errorCode);
       });
   };
 
   return (
     <>
-      <div className="navbar px-0  container mx-auto py-4 ">
+      <div className="navbar   container mx-auto py-4 px-1 lg:px-0">
         <div className="navbar-start">
           <div className="dropdown">
             <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden p-0 mr-2 lg:mr-0">
@@ -56,7 +58,7 @@ const Navbar = () => {
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h8m-8 6h16" />{" "}
               </svg>
             </div>
-            <ul tabIndex={0} className="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow">
+            <ul tabIndex={0} className="menu menu-sm dropdown-content bg-primary text-white rounded-box z-1 mt-3 w-32 p-2 shadow">
               {linksAll}
             </ul>
           </div>
@@ -65,7 +67,7 @@ const Navbar = () => {
           </a>
         </div>
         <div className="navbar-center hidden lg:flex">
-          <ul className="menu menu-horizontal px-1 font-semibold md:text-xl bg-primary text-white rounded-4xl">{linksAll}</ul>
+          <ul className="menu menu-horizontal px-1 font-semibold md:text-xl bg-primary text-white rounded-4xl ">{linksAll}</ul>
         </div>
         <div className="navbar-end flex gap-5 ">
           <div className="hover:cursor-pointer"> {user?.photoURL ? <img src={user.photoURL} alt="User" className="w-12 h-12 rounded-full object-cover " title={user.displayName} /> : <FaUserEdit size={35} title={"No User"} />}</div>

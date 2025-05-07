@@ -15,7 +15,7 @@ const Profile = () => {
     email: auth.currentUser?.email,
     photoURL: auth.currentUser?.photoURL,
   });
-  console.log(auth.currentUser);
+  // console.log(auth.currentUser);
 
   const handleSubmit = (e) => {
     // e.preventDefault();
