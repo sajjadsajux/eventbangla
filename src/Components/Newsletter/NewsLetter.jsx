@@ -51,7 +51,7 @@ const NewsLetter = () => {
                 <div className="relative bg-primary rounded shadow-2xl p-7 sm:p-10">
                   <h3 className="mb-4 text-xl font-semibold sm:text-center sm:mb-6 sm:text-2xl text-white">Sign up for updates</h3>
                   <form onSubmit={HandleNewsSubmit}>
-                    <div className="mb-1 sm:mb-2">
+                    <div className="mb-1 sm:mb-2 ">
                       <label htmlFor="name" className="inline-block mb-1 font-medium text-white">
                         Name
                       </label>

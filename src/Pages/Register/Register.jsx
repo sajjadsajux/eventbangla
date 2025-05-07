@@ -115,7 +115,7 @@ const Register = () => {
             <div className="space-y-1 text-sm relative">
               <label className="block font-bold lg:text-xl">Password</label>
               <input type={showPassword ? "text" : "password"} name="password" id="password" placeholder="Type Your Password" className="w-full px-4 py-3 rounded-md border-gray-700 bg-white text-black focus:border-violet-400 pr-12" required />
-              <span onClick={() => setShowPassword(!showPassword)} className="absolute right-4 top-11 text-xl text-gray-400 cursor-pointer ">
+              <span onClick={() => setShowPassword(!showPassword)} className="absolute lg:right-4 lg:top-11 right-3 top-9 text-xl text-gray-400 cursor-pointer ">
                 {showPassword ? <BsEyeSlash /> : <BsEye />}
               </span>
             </div>

@@ -77,7 +77,7 @@ const Login = () => {
                 Password
               </label>
               <input type={showPassword ? "text" : "password"} name="password" placeholder="Type Your Password" className="w-full px-4 py-3 rounded-md border-gray-700 bg-white text-black  focus:border-violet-400" required />
-              <span onClick={() => setShowPassword(!showPassword)} className="absolute bottom-11 right-5">
+              <span onClick={() => setShowPassword(!showPassword)} className="absolute lg:bottom-11 lg:right-5 right-3 bottom-9 ">
                 {" "}
                 {showPassword ? <BsEyeSlash size={20} className="text-black" /> : <BsEye size={20} className="text-black" />}
               </span>

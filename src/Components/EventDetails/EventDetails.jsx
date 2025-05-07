@@ -82,7 +82,7 @@ const EventDetails = () => {
               <div className="bg-white p-6 rounded-2xl shadow-md space-y-3 ">
                 <h3 className="text-lg font-bold text-primary">Reserve Your Seat</h3>
                 <form className="space-y-3 " onSubmit={handleReserve}>
-                  <input name="email" type="text" placeholder="Your Name" className="w-full px-4 py-1 border rounded" required />
+                  <input name="text" type="text" placeholder="Your Name" className="w-full px-4 py-1 border rounded" required />
                   <input name="email" type="email" placeholder="Your Email" className="w-full px-4 py-1 border rounded" required />
                   <button type="submit" className="w-full bg-primary font-semibold text-white py-2 rounded hover:bg-green-600 transition">
                     Reserve Seat
