@@ -1,14 +1,16 @@
-import React, { useState } from "react";
+import React, { use, useState } from "react";
 import { showCustomSuccessToast } from "../../Utils/SuccessToast";
 import PasswordErrorToast from "../../Utils/PasswordErrorToast";
 import { getAuth, updateProfile } from "firebase/auth";
 import app from "../../Firebase/firebase.config";
 import DynamicTittle from "../../Utils/DynamicTittle";
 import { TfiEmail } from "react-icons/tfi";
+import { AuthContext } from "../../Provider/AuthProvider";
 const auth = getAuth(app);
 
 const Profile = () => {
   DynamicTittle("Profile");
+  // const { setLoading } = use(AuthContext);
 
   const [userInfo, setUserInfo] = useState({
     name: auth.currentUser?.displayName,
