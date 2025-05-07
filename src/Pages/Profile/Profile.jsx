@@ -36,7 +36,7 @@ const Profile = () => {
         showCustomSuccessToast(`Your profile has been updated successfully.`);
       })
       .catch((error) => {
-        PasswordErrorToast(`Kindly update your profile with the latest information ${error.message}`);
+        PasswordErrorToast(`Kindly update your profile with the latest and valid information ${error.message}`);
       });
   };
 
@@ -62,7 +62,7 @@ const Profile = () => {
             <label className="block font-semibold">Photo URL:</label>
             <input type="url" name="photoURL" placeholder="Enter Valid Image URL " className="w-full p-1 border rounded" required />
           </div>
-          <button type="submit" className="bg-primary text-white w-full  py-2 rounded hover:bg-purple-700 transition">
+          <button type="submit" className="bg-primary text-white w-full  py-2 rounded hover:bg-green-500 transition">
             Update
           </button>
         </form>

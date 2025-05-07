@@ -4,7 +4,7 @@ Event Bangla is a modern, responsive single-page application (SPA) where users c
 
 ## 🔗 Live URL
 
-👉 Visit the Live Site
+👉 [Visit the Live Site](https://eventbangla.netlify.app/)
 
 ## 🎯 Project Purpose
 
