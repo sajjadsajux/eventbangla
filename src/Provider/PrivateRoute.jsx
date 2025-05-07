@@ -2,6 +2,7 @@ import React, { use } from "react";
 import { AuthContext } from "./AuthProvider";
 import { Navigate, useLocation } from "react-router";
 import { HashLoader, PacmanLoader, RingLoader, RotateLoader } from "react-spinners";
+import Loader from "../Utils/Loader";
 
 const PrivateRoute = ({ children }) => {
   const { user, loading } = use(AuthContext);
@@ -9,11 +10,7 @@ const PrivateRoute = ({ children }) => {
   console.log(location.pathname);
 
   if (loading) {
-    return (
-      <span className="h-screen flex justify-center items-center">
-        <RotateLoader color="#6600ff" speedMultiplier={1} />
-      </span>
-    );
+    return <Loader></Loader>;
   }
   if (user && user?.email) {
     return children;

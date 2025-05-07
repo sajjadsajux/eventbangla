@@ -14,6 +14,7 @@ import PrivacyPolicy from "../Pages/PrivacyPolicy/PrivacyPolicy";
 import Faq from "../Pages/Faq/Faq";
 import Contact from "../Pages/Contact/Contact";
 import MyEvents from "../Pages/MyEvents/MyEvents";
+import Loader from "../Utils/Loader";
 
 const router = createBrowserRouter([
   {
@@ -59,7 +60,11 @@ const router = createBrowserRouter([
       },
       {
         path: "/my-events",
-        element: <MyEvents></MyEvents>,
+        element: (
+          <PrivateRoute>
+            <MyEvents></MyEvents>
+          </PrivateRoute>
+        ),
       },
       {
         path: "/profile",
@@ -77,6 +82,7 @@ const router = createBrowserRouter([
           </PrivateRoute>
         ),
         loader: () => fetch("/eventbangla.json"),
+        hydrateFallbackElement: <Loader></Loader>,
       },
     ],
   },
