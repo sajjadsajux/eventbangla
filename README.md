@@ -1,6 +1,7 @@
 # 🎉 Event Bangla — Find Your Next Celebration, Right Here in Bangladesh!
 
 **Event Bangla** is a modern, responsive single-page web application (SPA) where users can discover, explore, and reserve seats for local events including conferences, workshops, concerts, sports, exhibitions, and more — all tailored for audiences in Bangladesh. The platform provides a seamless and intuitive interface for browsing trending events, viewing detailed information, and booking tickets in real time. Designed with accessibility and user-friendliness in mind, Event Bangla enhances the event discovery experience for every user — whether you're looking for entertainment, knowledge, or cultural enrichment.
+
 ---
 
 ### 🖼️ Screenshot
