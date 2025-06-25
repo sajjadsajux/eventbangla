@@ -1,85 +1,121 @@
-## 🎉 Event Bangla – Find Your Next Celebration, Right Here in Bangladesh!
+# 🎉 Event Bangla — Find Your Next Celebration, Right Here in Bangladesh!
 
-Event Bangla is a modern, responsive single-page application (SPA) where users can discover, explore, and reserve seats for local events like conferences, workshops, sports matches, art shows, and more.
+**Event Bangla** is a modern, responsive single-page web application (SPA) where users can discover, explore, and reserve seats for local events including conferences, workshops, concerts, sports, exhibitions, and more — all tailored for audiences in Bangladesh. The platform provides a seamless and intuitive interface for browsing trending events, viewing detailed information, and booking tickets in real time. Designed with accessibility and user-friendliness in mind, Event Bangla enhances the event discovery experience for every user — whether you're looking for entertainment, knowledge, or cultural enrichment.
+---
 
-## 🔗 Live URL
+### 🖼️ Screenshot
 
-👉 [Visit the Live Site](https://eventbangla.netlify.app/)
+![Event Bangla Screenshot](https://i.ibb.co/Kxj6gcFR/Fire-Shot-Capture-013-Home-eventbangla-netlify-app.png)
 
-## 🎯 Project Purpose
 
-This project is designed to create a smooth and interactive booking platform where users can:
+---
 
-🔍 Discover local events – Browse through various events happening around Bangladesh.
+### 🛠️ Technologies Used
 
-📄 Explore event details – View full information including date, time, location, and descriptions.
+#### Frontend
 
-🔐 Log in or create an account – Sign up using email and password to access more features.
+* HTML, CSS
+* Tailwind CSS
+* DaisyUI
+* React
+* React Router
+* Swiper.js
+* AOS (Animate On Scroll)
 
-🎟️ Book event seats – Secure your spot by reserving seats for upcoming events.
+#### Backend & Authentication
 
-## ✨ Key Features
+* Node.js
+* Express.js
+* MongoDB
+* Firebase
 
-- **🔐 Firebase Authentication**  
-  Users can register, log in, and log out securely using email/password. Authentication is required to access protected pages.
+#### UI & Enhancements
 
-- **🧭 Protected Routes**  
-  Pages like **Event Details**, **Booking**, and **User Profile** are only accessible to logged-in users.
+* React Icons
+* React Toastify
+* React Spinners
+* React CountUp
+* Mamba UI
+* Kitwind
 
-- **🎟️ Reserve Seats for Events**  
-  Logged-in users can book seats for available events with one click and get real-time booking feedback.
+---
 
-- **👤 Update User Profile**  
-  Users can change their display name and photo on their profile page.
+### ✨ Key Features
 
-- **🖼️ Swiper Slider**  
-  A swipeable carousel to showcase featured or trending events in a smooth, interactive style.
+* 🔐 Firebase Authentication – Secure login/signup with email & password
+* 🔒 Protected Routes – Access control for pages like Booking and Profile
+* 🎟️ Book Event Seats – Reserve your spot with real-time feedback
+* 👤 User Profile Management – Update display name and profile picture
+* 🖼️ Swiper Slider – Highlight featured events in a smooth carousel
+* 🎥 AOS Animations – Scroll-based fade-in/zoom-in UI effects
+* 🍞 Toast Notifications – Real-time messages for actions and errors
+* ⏳ Loading Spinners – User-friendly loading during data fetch
+* 📈 Animated Counters – Display event/user stats dynamically
+* 📱 Responsive Design – Optimized for all device sizes
 
-- **🎬 Scroll Animations with AOS**  
-  Beautiful fade-in and zoom effects on scroll to enhance the browsing experience.
+---
 
-- **🍞 Toast Notifications**  
-  Instant feedback via toast messages (e.g., login success, booking confirmed, or errors).
+### 📦 Dependencies Used
 
-- **⏳ Loading Spinners**  
-  Shows loading animations while data is being fetched to maintain a smooth user experience.
+* @tailwindcss/vite: ^4.1.5
+* aos: ^2.3.4
+* daisyui: ^5.0.35
+* firebase: ^11.6.1
+* react: ^19.0.0
+* react-countup: ^6.5.3
+* react-dom: ^19.0.0
+* react-icons: ^5.5.0
+* react-router: ^7.5.3
+* react-spinners: ^0.17.0
+* react-toastify: ^11.0.5
+* swiper: ^11.2.6
+* tailwindcss: ^4.1.5
 
-- **📈 Animated Counters**  
-  Highlights key statistics like total events, users, or ratings with engaging number animations.
+---
 
-- **📱 Fully Responsive Design**  
-  Optimized for all screen sizes — from mobile phones to large desktops.
+### 🗖️ Run Locally
 
-## 🛠️ Tech Stack & Tools Used
+1. **Clone the Repository**
 
-- **Vite** – Fast build tool
+```bash
+git clone https://github.com/your-username/event-bangla.git
+cd event-bangla
+```
 
-- **React** – JavaScript library for UI
+2. **Install Dependencies**
 
-- **React Router** – Routing for SPA
+```bash
+npm install
+```
 
-- **Tailwind CSS** – Utility-first CSS
+3. **Setup Environment Variables**
+   Create a `.env` file in the root and add:
 
-- **DaisyUI** – Tailwind component library
+```env
+VITE_apiKey=your_firebase_api_key
+VITE_authDomain=your_project.firebaseapp.com
+VITE_projectId=your_project_id
+VITE_storageBucket=your_project.appspot.com
+VITE_messagingSenderId=your_sender_id
+VITE_appId=your_app_id
+```
 
-- **React Icons** – Icon support
+4. **Start Development Server**
 
-- **Firebase** – Authentication
+```bash
+npm run dev
+```
 
-- **Mamba UI** – Component styling
+---
 
-- **Swiper JS** – Image and content slider
+### 🔗 Live Site
 
-- **React Toastify** – Notification toasts
+* [Visit Event Bangla](https://your-eventbangla-live-url.com)
 
-- **React Spinners** – Loading animations
+---
 
-- **React CountUp** – Animated numbers
+### 💬 Feedback & Contributions
 
-- **Kitwind** – UI components
-
-- **AOS** – Animate On Scroll for effects
-
-## ✅ Conclusion
-
-Thanks for checking out Event Bangla! I’ve built this project to practice and showcase modern web development skills while solving a real-world use case. If you have any suggestions, feedback, or ideas to improve it — feel free to reach out. I'd love to hear from you!
+Thank you for checking out **Event Bangla**!
+If you find bugs, have ideas, or want to contribute — feel free to open an issue or submit a pull request.
+Your suggestions are always welc
