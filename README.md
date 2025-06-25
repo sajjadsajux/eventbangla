@@ -111,7 +111,7 @@ npm run dev
 
 ### 🔗 Live Site
 
-* [Visit Event Bangla](https://your-eventbangla-live-url.com)
+* [Visit Event Bangla](https://eventbangla.netlify.app/)
 
 ---
 
