@@ -119,4 +119,4 @@ npm run dev
 
 Thank you for checking out **Event Bangla**!
 If you find bugs, have ideas, or want to contribute — feel free to open an issue or submit a pull request.
-Your suggestions are always welc
+Your suggestions are always welcome
